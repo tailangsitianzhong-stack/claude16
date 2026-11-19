@@ -8,7 +8,7 @@
 |---|---|---|
 | ファイル作成・編集・git | 可 | 本セッションで使用 |
 | Web (HTTPS) | 部分的に可 | lichess.org への GET が 200 (2026-11-19)。許可ホストは環境のプロキシに依存 |
-| python-chess | **不可（未導入）** | `import chess` が ModuleNotFoundError。`pip install chess` は自動承認で拒否された |
+| python-chess | 可（1.11.2 導入済み、2026-11-19 Session 2） | 通常の許可要求経由。`chess` は setuptools<68 + --no-build-isolation で導入。コンテナ再作成時は再導入が必要 |
 | Stockfish | **未導入** | `which stockfish` が空。導入は拒否済み。Phase 9 までは仕様上も不要 |
 | チェス盤表示 | テキスト(ASCII/FEN)のみ | 専用機能は未確認 |
 | モデル重みの更新 | **不可** | 学習＝ファイル記録＋反復演習の意味でのみ |
@@ -25,7 +25,7 @@
 | Phase | 内容 | ステータス |
 |---|---|---|
 | 0 | 初期診断・環境構築 | UNDER REVIEW |
-| 1 | 基礎知識 | NOT STARTED（次回開始） |
+| 1 | 基礎知識 | IN PROGRESS（U1.1 着手） |
 | 2 | 戦術 | NOT STARTED |
 | 3 | オープニング | NOT STARTED |
 | 4 | ポジショナル | NOT STARTED |
