@@ -25,7 +25,7 @@
 | Phase | 内容 | ステータス |
 |---|---|---|
 | 0 | 初期診断・環境構築 | UNDER REVIEW |
-| 1 | 基礎知識 | IN PROGRESS（U1.1 着手） |
+| 1 | 基礎知識 | IN PROGRESS（U1.1 ほぼ完了／U1.4: K+Q・K+R 達成、K+2B 未達） |
 | 2 | 戦術 | NOT STARTED |
 | 3 | オープニング | NOT STARTED |
 | 4 | ポジショナル | NOT STARTED |
