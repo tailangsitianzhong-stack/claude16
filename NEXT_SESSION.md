@@ -46,11 +46,15 @@
 6. 相手の応手: 王手→取り→中間手→ディスカバードの順に列挙(Q18 の筋が開く取り、Q26 の中間手、Q22 のキングによるルークの遮断)
 7. 読み: 強制手順は3手目まで具体的に書き、フォーク・二重の脅威の連鎖を最後まで確認(Q05/Q09)
 8. 確信度: 3手目まで確認できていなければ60%以下。確信度と正答率は全体では整合したが識別力は弱い(中確信度 40〜69% は 1/5)
+9. 王手の列挙は駒ごとに(ルークは4方向、ビショップは2対角、取りを兼ねる王手も)。守り駒に見える駒の王手も確認(S6 D1/D2、S7 P4)
+10. K+P vs K: 防御側キングが前に立っても、ポーンの待ち手(テンポ)で攻撃側がオポジションを得て迂回できるかを確認(S7 K3)
 
 ## 既出パズルID(lichess、47件。未見問題の選定では除外。S2 の B1/B2 は自作局面でIDなし)
 - S5 R1: 6LYsU DbEF5 qx8Lc zP7DG U43UX s0elc / S5 R2: zeRUn Gj2I4 9nthD yBIGD 7yazo g2q0j
 - S6 30問: XYxk1 UNQMj YR0Md n5lG5 GIVgc PCfKg xVfpr nel8Q jGbEv 3v5bZ kELSw X4Ugy 9QtCQ d2hAi frvUi oclih 3h7sA OaWYX tZSZh W9NPx YmRdf ZSJlU t8W4X lCEVS ydasW gzQub 4Df47 grEm1 YBPZe cNSxl
 - S6 確認5問: kDz20 K4OCu P17HT 9zDtb v2QAJ
+- S6 弱点集中5問: M1cPV zxntd QQicn b5skV EaEoG
+- S7 Phase 1 集中(戦術4問): NsDje 5dtwK Ge7iX 9UQ7R
 - 30問のうち第1手不一致14: W9NPx X4Ugy nel8Q XYxk1 kELSw jGbEv YR0Md GIVgc 4Df47 n5lG5 PCfKg OaWYX grEm1 frvUi(うち解答第1手が王手の10: W9NPx X4Ugy nel8Q XYxk1 kELSw YR0Md GIVgc PCfKg OaWYX frvUi)
 - 応手の外れ6: d2hAi YBPZe UNQMj YmRdf xVfpr cNSxl
 - 注意: 既出のため再利用すると記憶の影響が入る。失敗パターンの復習用に限り、測定には使わない
