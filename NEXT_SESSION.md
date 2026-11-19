@@ -5,6 +5,10 @@
 - 次に必要な学習(優先順): (1) K+2B の自力メイト(未見の開始局面、ヒントなし。壁の原則・守られた隣接ビショップ・最終網の2型・ステイルメイト回避) (2) 王手の全列挙(駒種ごと: ルーク4方向、ビショップ2対角、**ナイト8升**、ディスカバード)と、読み筋の各手の合法性追跡(自駒が筋を遮る場合) (3) 相手の応手の全列挙と応手後の再列挙 (4) K+P vs K の実戦(ポーンを急がずテンポ手でキングを前進)
 - K+2B の再現: 後退解析テーブルベース(スクラッチパッドのみ、消える)は再構築が必要。python-chess の再導入手順は下の「運用メモ」
 
+## S9 時点の状態(提案。正式な計画ではない)
+- 正式状態は不変: Phase 0 UNDER REVIEW / Phase 1 IN PROGRESS。K+2B は未見3局中1局で自力メイト(再現性は未確認)、U1.2/U1.3/U1.5 は未達
+- 次に必要な学習(優先順): (1) K+2B を別配置(上辺・中央)で再現: 黒の位置に合わせた壁の線の選択、キングを外側中央へ先に運ぶ、保護された隣接ビショップ網(例 K c6/Bc7/L 王手)の前提確認 (2) 王手の応手の全列挙と「守られた駒は取れない」の確認(V2/V4 型) (3) K+P vs K の実戦: オポジションと手数の数え(Kf5! 型)、三角測量 (4) U1.2/U1.3 の未見測定
+
 ## 達成基準の提案(**未承認**。MASTER_PLAN.md の正式な完了条件は変更していない。承認後に採用を検討)
 共通: 未見の問題は既出ID(下の一覧)と過去に見た局面を除外。正解は外部データ(lichess パズル/テーブルベース)または python-chess の機械的な定義から作り、回答確定後に採点。10問規模の合格率は不確実性が大きい(例: 7/10 の 95% 区間は約 35〜93%)ため、**別々のセッションで2回**満たすことを推奨。
 - **U1.2 駒価値・展開・中央(駒の安全)**
@@ -79,13 +83,14 @@
 11. 王手の列挙にナイト(8升)とディスカバード(ナイトが筋を開く手)を含める。読み筋の各手を盤上で追い、自駒が筋を遮らないか確認(S8 T3/T4)
 12. K+P vs K 実戦: 黒キングが前に立つ時はポーンを急がず、キングの前進とテンポ手を優先(S8 実戦B)
 
-## 既出パズルID(lichess、61件。未見問題の選定では除外。S2 の B1/B2 は自作局面でIDなし。※S8 で件数表記を訂正: 旧「47件」は S7 の追加分を含まない古い数で、S8 時点で 12+30+5+5+4+5=61 件)
+## 既出パズルID(lichess、67件。未見問題の選定では除外。S2 の B1/B2 は自作局面でIDなし。※S8 で件数表記を訂正: 旧「47件」は S7 の追加分を含まない古い数で、S8 時点で 12+30+5+5+4+5=61 件、S9 で6件追加して67件)
 - S5 R1: 6LYsU DbEF5 qx8Lc zP7DG U43UX s0elc / S5 R2: zeRUn Gj2I4 9nthD yBIGD 7yazo g2q0j
 - S6 30問: XYxk1 UNQMj YR0Md n5lG5 GIVgc PCfKg xVfpr nel8Q jGbEv 3v5bZ kELSw X4Ugy 9QtCQ d2hAi frvUi oclih 3h7sA OaWYX tZSZh W9NPx YmRdf ZSJlU t8W4X lCEVS ydasW gzQub 4Df47 grEm1 YBPZe cNSxl
 - S6 確認5問: kDz20 K4OCu P17HT 9zDtb v2QAJ
 - S6 弱点集中5問: M1cPV zxntd QQicn b5skV EaEoG
 - S7 Phase 1 集中(戦術4問): NsDje 5dtwK Ge7iX 9UQ7R
 - S8 Phase 1 未達項目(戦術5問): TdA5F Lf7Iq 2SnAv wrUT7 3oY8W
+- S9 実力完成(戦術6問): PZMr8 5IJ18 2XdsW G5OA2 qyfwM AE8Wc
 - 30問のうち第1手不一致14: W9NPx X4Ugy nel8Q XYxk1 kELSw jGbEv YR0Md GIVgc 4Df47 n5lG5 PCfKg OaWYX grEm1 frvUi(うち解答第1手が王手の10: W9NPx X4Ugy nel8Q XYxk1 kELSw YR0Md GIVgc PCfKg OaWYX frvUi)
 - 応手の外れ6: d2hAi YBPZe UNQMj YmRdf xVfpr cNSxl
 - 注意: 既出のため再利用すると記憶の影響が入る。失敗パターンの復習用に限り、測定には使わない
